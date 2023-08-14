@@ -9,7 +9,17 @@ public class Main {
 		cc.depositar(100);
 		cc.transferir(100, poupanca);
 		
-		cc.imprimirExtrato();
-		poupanca.imprimirExtrato();
+		cc.imprimirInfosComuns();
+		poupanca.imprimirInfosComuns();
+
+		Cliente marco = new Cliente();
+		marco.setNome(("Marco"));
+
+		Conta cm = new ContaCorrente(marco);
+		cm.imprimirInfosComuns();
+
+		System.out.println(cc.getNumeroCartao());
+		System.out.println(cm.getNumeroCartao());
     }
+
 }
